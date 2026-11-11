@@ -3,39 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Synapse — grounded answers for real-estate and relocation decisions</title>
-<meta name="description" content="Synapse returns decision-ready answers for real-estate and relocation questions: each claim with its source and a confidence level.">
-<style>
-  :root { --ink:#1b1f24; --muted:#5b6470; --line:#e3e6ea; --bg:#fbfbfa; --accent:#2f5d50; }
-  @media (prefers-color-scheme: dark) {
-    :root { --ink:#e8eaed; --muted:#a3abb5; --line:#30353b; --bg:#141719; --accent:#8fc1b0; }
-  }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink);
-         font:17px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  main { max-width:680px; margin:0 auto; padding:72px 24px 48px; }
-  .mark { font-weight:700; letter-spacing:.04em; color:var(--accent); font-size:15px; text-transform:uppercase; }
-  h1 { font-size:32px; line-height:1.25; margin:12px 0 28px; font-weight:650; }
-  p { margin:0 0 18px; }
-  .note { color:var(--muted); border-left:3px solid var(--line); padding-left:14px; }
-  footer { border-top:1px solid var(--line); margin-top:40px; padding-top:18px; color:var(--muted); font-size:15px; }
-  a { color:var(--accent); }
-</style>
+<title>Synapse</title>
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%20role%3D%22img%22%20aria-label%3D%22Synapse%22%3E%3Cpath%20d%3D%22M7.5%206V26%22%20stroke%3D%22%23123b56%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M7.5%2010H17M7.5%2016H13.5M7.5%2022H10%22%20stroke%3D%22%23123b56%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2210%22%20r%3D%222.9%22%20fill%3D%22%23123b56%22/%3E%3Ccircle%20cx%3D%2220.5%22%20cy%3D%2216%22%20r%3D%222.9%22%20fill%3D%22%23123b56%22/%3E%3Ccircle%20cx%3D%2217%22%20cy%3D%2222%22%20r%3D%222.9%22%20fill%3D%22%23123b56%22/%3E%3C/svg%3E">
+<link rel="alternate" hreflang="ru" href="https://synapseproof.com/ru/">
+<link rel="alternate" hreflang="en" href="https://synapseproof.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://synapseproof.com/en/">
+<noscript><meta http-equiv="refresh" content="0; url=en/"></noscript>
+<script>
+(function () {
+  var have = ["ru","en"], fallback = "en";
+  var l = String((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase().split("-")[0];
+  location.replace((have.indexOf(l) >= 0 ? l : fallback) + "/");
+})();
+</script>
 </head>
-<body>
-<main>
-  <div class="mark">Synapse</div>
-  <h1>Grounded answers for real-estate and relocation decisions</h1>
-
-  <p>Buying, leasing or relocating across borders means living with questions that have no single reliable answer online: which permit applies, what a clause really allows, what a number was on a given date. Synapse takes such a question and returns a decision-ready answer: each claim with the source it rests on and a confidence level, instead of a stream of links.</p>
-
-  <p>Under the hood it is a multi-model pipeline: several models work the question independently, their output is checked against primary sources (laws, registries, official rates), and anything that cannot be backed by a source is marked as such rather than hidden. Live numbers such as exchange rates come from deterministic public data, never from a model's memory.</p>
-
-  <p class="note">Synapse is decision support for people and teams who work with property and relocation. It does not replace a lawyer or a notary.</p>
-
-  <footer>
-    Built and run by Ilia Smyslov, product owner · contact: <a href="mailto:ilia@fromsynapse.com">ilia@fromsynapse.com</a>
-  </footer>
-</main>
+<body style="font-family:system-ui,sans-serif;padding:24px">
+<p><a href="ru/" hreflang="ru" lang="ru">Русский</a> · <a href="en/" hreflang="en" lang="en">English</a></p>
 </body>
 </html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Задать один вопрос — Synapse</title>
+<meta name="description" content="Расскажите, где вы стали бы пользоваться Synapse, задайте один вопрос и получите проверенный ответ на рабочую почту, бесплатно.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%20role%3D%22img%22%20aria-label%3D%22Synapse%22%3E%3Cpath%20d%3D%22M7.5%206V26%22%20stroke%3D%22%23123b56%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Cpath%20d%3D%22M7.5%2010H17M7.5%2016H13.5M7.5%2022H10%22%20stroke%3D%22%23123b56%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22/%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2210%22%20r%3D%222.9%22%20fill%3D%22%23123b56%22/%3E%3Ccircle%20cx%3D%2220.5%22%20cy%3D%2216%22%20r%3D%222.9%22%20fill%3D%22%23123b56%22/%3E%3Ccircle%20cx%3D%2217%22%20cy%3D%2222%22%20r%3D%222.9%22%20fill%3D%22%23123b56%22/%3E%3C/svg%3E">
+<link rel="canonical" href="https://synapseproof.com/ru/try.html">
+<link rel="alternate" hreflang="ru" href="https://synapseproof.com/ru/try.html">
+<link rel="alternate" hreflang="en" href="https://synapseproof.com/en/try.html">
+<link rel="alternate" hreflang="x-default" href="https://synapseproof.com/en/try.html">
+<style>
+:root { --brand:#123b56; --brand-soft:#e6eff4; --ink:#202833; --muted:#66727d; --line:#dde4e8; --line-strong:#b8c5cc;
+  --recessed:#f6f8f9; --green:#2f6b50; --amber:#8b642d; --rose:#c94e67; --rose-strong:#a93d54;
+  --ui: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display: Georgia, "Times New Roman", serif; --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+* { box-sizing:border-box; } html { scroll-behavior:smooth; }
+body { margin:0; background:#fff; color:var(--ink); font:17px/1.6 var(--ui); }
+a { color:var(--brand); }
+.wrap { max-width:1120px; margin:0 auto; padding:0 28px; }
+.top { border-bottom:1px solid var(--line); background:#fff; position:sticky; top:0; z-index:5; }
+.top .wrap { display:flex; align-items:center; justify-content:space-between; height:68px; }
+.logo { display:flex; align-items:center; gap:11px; text-decoration:none; }
+.logo svg { width:30px; height:30px; display:block; }
+.word { font:850 16px/1 var(--mono); letter-spacing:.24em; text-transform:uppercase; color:var(--brand); }
+nav { display:flex; align-items:center; }
+nav a { color:var(--muted); text-decoration:none; font:800 10.5px/1 var(--mono); letter-spacing:.13em; text-transform:uppercase; margin-left:22px; }
+nav a:hover { color:var(--brand); }
+nav a.nav-try { color:#fff; background:var(--brand); padding:10px 14px; border-radius:8px; }
+.eyebrow { color:var(--brand); font:850 11px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; margin:0 0 16px; }
+h1, h2 { margin:0; font-family:var(--display); font-weight:500; color:var(--brand); letter-spacing:-.022em; }
+h2 { font-size:36px; line-height:1.12; margin-bottom:16px; }
+h3 { margin:0 0 6px; font-size:17px; color:var(--ink); } p { margin:0 0 16px; }
+.muted { color:var(--muted); } .narrow { max-width:700px; }
+.btn { display:inline-block; padding:14px 22px; border-radius:9px; background:var(--brand); color:#fff; text-decoration:none;
+  font:800 11px/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; border:1px solid var(--brand); cursor:pointer; }
+.btn.ghost { background:#fff; color:var(--brand); border-color:var(--line-strong); }
+.btns { display:flex; flex-wrap:wrap; gap:10px; }
+.sec { padding:84px 0; border-top:1px solid var(--line); } .alt { background:var(--recessed); }
+.grid { display:grid; gap:18px; margin-top:32px; } .g3 { grid-template-columns:repeat(3,1fr); } .g4 { grid-template-columns:repeat(4,1fr); } .g5 { grid-template-columns:repeat(5,1fr); } .gauto { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+.tile { background:#fff; border:1px solid var(--line); border-radius:12px; padding:22px; }
+.tile p { margin:0; color:var(--muted); font-size:15.5px; }
+/* hero */
+.hero { padding:110px 0 92px; }
+.hero h1 { font-size:60px; line-height:1.04; max-width:860px; margin-bottom:24px; }
+.hero .lead { font-size:21px; color:var(--muted); max-width:700px; margin-bottom:34px; }
+.lines-now { margin-top:30px; font:800 11px/1.6 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.lines-now b { color:var(--brand); font-weight:850; }
+/* compare */
+.cmp .tile h3 { font:850 11px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:14px; }
+.cmp .tile.us { border:2px solid var(--brand); background:var(--brand-soft); }
+.cmp .tile.us h3 { color:var(--brand); } .cmp .tile.us p { color:var(--ink); }
+.insight { font:500 26px/1.3 var(--display); color:var(--ink); max-width:820px; margin:40px 0 14px; padding-left:20px; border-left:3px solid var(--green); }
+.small { font-size:14px; color:var(--muted); }
+/* engine */
+.step-n { display:block; color:var(--brand); font:850 11px/1 var(--mono); letter-spacing:.12em; margin-bottom:12px; }
+.facts { display:grid; grid-template-columns:1fr 1fr 2fr; gap:0; margin-top:34px; border:1px solid var(--line); border-radius:12px; background:#fff; overflow:hidden; }
+.fact { padding:24px 26px; border-right:1px solid var(--line); } .fact:last-child { border-right:0; }
+.fact b { display:block; font:500 46px/1 var(--display); color:var(--brand); margin-bottom:10px; letter-spacing:-.02em; }
+.fact span { color:var(--muted); font-size:15px; }
+.fact.run b { font-size:22px; line-height:1.3; }
+.fact.run .runline { display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:6px; }
+.fact.run .runline i { font-style:normal; font:800 12px/1.4 var(--mono); color:var(--ink); }
+.fact.run .runline i em { font-style:normal; font:500 26px/1 var(--display); color:var(--brand); margin-right:6px; }
+/* example + ledger motif */
+.legend { display:flex; flex-wrap:wrap; gap:18px; margin:26px 0 0; font:800 10.5px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.legend span { display:inline-flex; align-items:center; gap:7px; }
+.legend i { width:10px; height:10px; border-radius:50%; display:inline-block; }
+.examples { display:grid; grid-template-columns:1fr; gap:26px; margin-top:22px; }
+.example { border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#fff; }
+.ex-head { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px 22px; background:#fdf3e6; color:var(--amber); font-size:13.5px; font-weight:600; border-bottom:1px solid var(--line); }
+.ex-head .line-name { font:850 10px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--brand); white-space:nowrap; }
+.ex-q { padding:20px 22px; border-bottom:1px solid var(--line); background:var(--recessed); }
+.lbl { display:block; color:var(--brand); font:850 9.5px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; margin-bottom:8px; }
+.claims { padding:6px 22px 14px; position:relative; }
+.claims::before { content:""; position:absolute; left:28px; top:22px; bottom:30px; width:2px; background:var(--line-strong); }
+.claim { position:relative; padding:15px 0 15px 34px; border-bottom:1px dashed var(--line); }
+.claim:last-child { border-bottom:0; }
+.claim::before { content:""; position:absolute; left:0; top:22px; width:14px; height:14px; border-radius:50%; background:var(--c); box-shadow:0 0 0 3px #fff; }
+.claim p { margin:0 0 7px; }
+.meta { display:flex; flex-wrap:wrap; align-items:center; gap:10px; font-size:14px; color:var(--muted); }
+.score { display:inline-flex; align-items:center; gap:8px; font:800 11px/1 var(--mono); letter-spacing:.06em; color:var(--c); text-transform:uppercase; }
+.bar { width:74px; height:6px; border-radius:3px; background:var(--line); overflow:hidden; } .bar i { display:block; height:100%; background:var(--c); }
+.src { font-family:var(--mono); font-size:13px; }
+.cg { --c:var(--green); } .ca { --c:var(--amber); } .cr { --c:var(--rose); }
+.unchecked { display:inline-block; padding:3px 8px; border-radius:999px; background:#fff0f3; color:var(--rose-strong); font:800 10px/1.2 var(--mono); letter-spacing:.1em; text-transform:uppercase; }
+.ex-next { padding:15px 22px; background:var(--brand-soft); font-size:15px; }
+/* lines */
+.line-card { background:#fff; border:1px solid var(--line); border-radius:12px; padding:24px; display:flex; flex-direction:column; }
+.line-card .lname { display:flex; align-items:center; gap:9px; margin-bottom:10px; }
+.line-card .lname svg { width:22px; height:22px; }
+.line-card .lname b { font:500 21px/1.1 var(--display); color:var(--brand); }
+.line-card p { color:var(--muted); font-size:15.5px; }
+.line-card ul { list-style:none; padding:0; margin:auto 0 0; border-top:1px solid var(--line); }
+.line-card li { padding:10px 0; border-bottom:1px solid var(--line); font:italic 15.5px/1.45 var(--display); color:var(--ink); }
+.line-card li:last-child { border-bottom:0; padding-bottom:0; }
+.not { border-left:3px solid var(--brand); padding-left:20px; }
+.not ul { padding-left:20px; margin:0; color:var(--muted); } .not li { margin-bottom:8px; }
+.cta { background:var(--brand); color:#fff; border-top:0; }
+.cta h2 { color:#fff; } .cta p { color:#c6d6e1; } .cta .btn { background:#fff; color:var(--brand); border-color:#fff; }
+footer { border-top:1px solid var(--line); padding:38px 0 50px; color:var(--muted); font-size:14.5px; }
+footer .wrap { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:14px; }
+footer .sig { display:flex; align-items:center; gap:10px; }
+footer .langs { font:800 11px/1 var(--mono); letter-spacing:.12em; } footer .langs b { color:var(--brand); } footer .langs a { color:var(--muted); } footer .langs .soon { opacity:.45; }
+footer .sig svg { width:22px; height:22px; }
+footer .sig b { font:850 10.5px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--brand); }
+/* direction D: evidence ledger */
+.facts .fact:first-child b { font-size:72px; line-height:1; }
+.eyebrow { border-color:transparent !important; background:var(--brand-soft); }
+.ev-tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+.ev-tags span { border:1px solid var(--brand); padding:11px 14px; font:800 11.5px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--brand); background:#fff; }
+.ev-tags span.on { background:var(--brand); color:#fff; }
+.wordbox { display:flex; flex-direction:column; gap:5px; }
+.tagline { font:700 9.5px/1.2 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.pv { background:#fdf3e6; border-bottom:1px solid var(--line); padding:9px 0; font:700 11px/1.6 var(--mono); color:var(--amber); }
+.pv a { color:var(--brand); } .pv .on { color:var(--ink); text-decoration:underline; }
+.pitch { margin:22px 0 0; padding:14px 18px; border-left:5px solid var(--brand); background:#fff; font-size:16.5px; color:var(--ink); } .pitch p { margin:0 0 8px; }
+.pitch-sig { display:block; font:800 10.5px/1.4 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-top:8px; }
+.top { border-bottom:1px solid var(--ink); }
+.btn, .tile, .example, .facts, .line-card, .mini, nav a.nav-try { border-radius:0; }
+.eyebrow { display:inline-block; padding:5px 8px; border:1px solid var(--brand); }
+.hero { border-bottom:1px solid var(--ink); background-image:linear-gradient(#edf1f3 1px, transparent 1px); background-size:100% 32px; }
+.hero-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:52px; align-items:center; }
+.hero h1 { font-size:56px; }
+.mini { background:#fff; border:1px solid var(--ink); box-shadow:8px 8px 0 var(--brand-soft); }
+.mini-head { padding:11px 18px; border-bottom:1px solid var(--line); font:850 10px/1.3 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--amber); background:#fdf3e6; }
+.mini .claims { padding:4px 18px 10px; } .mini .claims::before { left:24px; }
+.mini .claim p { font-size:15.5px; }
+.grid.g3, .grid.g4, .grid.g5 { gap:0; border-top:1px solid var(--ink); border-left:1px solid var(--line); }
+.grid.g3 > .tile, .grid.g4 > .tile, .grid.g5 > .tile { border:0; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.example { border:1px solid var(--ink); }
+.claim { padding-left:34px; }
+.aud { display:grid; grid-template-columns:1fr 1.6fr; gap:0; margin-top:32px; border:1px solid var(--ink); background:#fff; }
+.aud-b2c { padding:30px; background:var(--brand); color:#fff; }
+.aud-b2c .lbl { color:#9fc3b2; } .aud-b2c h3 { color:#fff; font:500 26px/1.2 var(--display); margin:6px 0 14px; }
+.aud-b2c p { color:#d5e2ea; margin:0 0 12px; }
+.aud-b2c ul { margin:0 0 14px; padding-left:18px; color:#d5e2ea; } .aud-b2c li { margin-bottom:6px; }
+.aud-b2b { padding:30px; }
+.aud-b2b .row { padding:16px 0; border-bottom:1px solid var(--line); } .aud-b2b .row:last-child { border-bottom:0; padding-bottom:0; }
+.aud-b2b .row:first-of-type { padding-top:6px; }
+.aud-b2b p { margin:0; color:var(--muted); font-size:15.5px; }
+.aud-lbl { display:block; margin-top:30px; }
+.aud-co { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:12px; }
+.co { background:#fff; border:1px solid var(--ink); border-top:5px solid var(--brand); padding:26px 26px 28px; }
+.co-n { display:block; font:800 12px/1 var(--mono); letter-spacing:.12em; color:var(--green); margin-bottom:14px; }
+.co h3 { font:500 26px/1.15 var(--display); color:var(--brand); margin:0 0 12px; }
+.co p { margin:0; color:var(--ink); font-size:16px; }
+.aud-wide { display:grid; grid-template-columns:1fr 1fr; gap:34px; margin-top:18px; }
+.aud-wide ul { margin-top:4px; }
+.r-scroll { max-height:560px; overflow-y:auto; overscroll-behavior:contain; }
+.r-scroll:focus-visible { outline:2px solid var(--brand); outline-offset:-2px; }
+.mini .r-scroll { max-height:460px; }
+.r-sum { padding:16px 22px 4px; } .r-sum p { margin:4px 0 0; font-size:16px; line-height:1.55; }
+.r-sec { margin:16px 22px 0; font:800 11px/1.4 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--brand); }
+.r-open { margin:8px 22px 18px; padding:12px 16px; background:var(--recessed); border-left:3px solid var(--amber); }
+.r-open ul { margin:6px 0 0; padding-left:18px; } .r-open li { font-size:14.5px; margin-bottom:5px; }
+.r-hint { padding:9px 22px; font:800 10.5px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); border-top:1px solid var(--line); background:#fff; }
+.meta a { color:var(--brand); text-decoration:underline; text-underline-offset:2px; }
+.mini .r-sum { padding:12px 18px 4px; } .mini .r-sec { margin:14px 18px 0; } .mini .r-open { margin:8px 18px 14px; } .mini .r-hint { padding:8px 18px; }
+@media (max-width:760px) { .r-scroll { max-height:480px; } .mini .r-scroll { max-height:420px; } }
+@media (max-width:980px) { .g5 { grid-template-columns:repeat(2,1fr); } .g4 { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:760px) {
+  .g3, .g4, .g5 { grid-template-columns:1fr; } nav a:not(.nav-try) { display:none; }
+  .hero { padding:64px 0 60px; } .hero h1 { font-size:38px; } h2 { font-size:29px; } .insight { font-size:21px; }
+  .hero-grid, .aud, .aud-co, .aud-wide { grid-template-columns:1fr; } .hero h1 { font-size:36px; }
+  .facts { grid-template-columns:1fr; } .fact { border-right:0; border-bottom:1px solid var(--line); } .fact:last-child { border-bottom:0; }
+  .ex-head { flex-direction:column; align-items:flex-start; } .wrap { padding:0 20px; } }
+
+.form-wrap { max-width:720px; padding:72px 0 90px; }
+.form-wrap h1 { font-size:48px; line-height:1.06; margin-bottom:18px; }
+.form-wrap .lead { font-size:19px; color:var(--muted); }
+form { margin-top:34px; display:grid; gap:20px; }
+label.f { display:grid; gap:7px; }
+label.f > span { font:850 10.5px/1 var(--mono); letter-spacing:.13em; text-transform:uppercase; color:var(--brand); }
+input[type=text], input[type=email], select, textarea { font:16px/1.4 var(--ui); color:var(--ink); padding:11px 12px; border:1px solid var(--line-strong); border-radius:9px; background:#fff; width:100%; }
+textarea { min-height:96px; resize:vertical; }
+input:focus, select:focus, textarea:focus { outline:2px solid var(--brand); outline-offset:1px; }
+.count { font:700 11px/1 var(--mono); color:var(--muted); justify-self:end; }
+.consent { display:flex; gap:10px; align-items:flex-start; font-size:15px; }
+.consent input { width:18px; height:18px; margin-top:3px; }
+.stop { display:none; padding:14px 16px; border:1px solid var(--rose); background:#fffafb; color:var(--rose-strong); border-radius:10px; font-size:15px; }
+.stop.on { display:block; }
+.btn[disabled] { opacity:.45; cursor:not-allowed; }
+.hint { font-size:14px; color:var(--muted); margin:0; }
+.steps-mini { display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:22px; font:800 10.5px/1.5 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.steps-mini b { color:var(--brand); }
+.fallback { border:1px solid var(--ink); background:#fff; padding:18px; display:grid; gap:10px; }
+.fallback[hidden] { display:none; }
+.fallback textarea { min-height:180px; font:13px/1.45 var(--mono); }
+.row-btns { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+</style>
+</head>
+<body><header class="top"><div class="wrap">
+  <a class="logo" href="index.html#top" aria-label="Synapse — на главную"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Synapse"><path d="M7.5 6V26" stroke="#123b56" stroke-width="3" stroke-linecap="round"/><path d="M7.5 10H17M7.5 16H13.5M7.5 22H10" stroke="#123b56" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="10" r="2.9" fill="#2f6b50"/><circle cx="20.5" cy="16" r="2.9" fill="#8b642d"/><circle cx="17" cy="22" r="2.9" fill="#c94e67"/></svg><span class="wordbox"><span class="word">Synapse</span><span class="tagline">Сначала узнать, потом доказать, потом советовать</span></span></a>
+  <nav aria-label="Разделы"><a href="index.html#why">Почему Synapse</a><a href="index.html#engine">Как устроен</a><a href="index.html#example">Примеры</a><a href="index.html#lines">Направления</a><a class="nav-try" href="#top">Задать вопрос</a></nav>
+</div></header>
+<main id="top"><div class="wrap"><div class="form-wrap">
+  <p class="eyebrow">Один вопрос бесплатно</p>
+  <h1>Задайте один вопрос</h1>
+  <p class="lead">Один вопрос — один проверенный ответ, бесплатно. Сначала расскажите, где вы стали бы им пользоваться: именно из этого мы учимся.</p>
+  <p class="hint">Ответ придёт на рабочую почту, обычно в течение рабочего дня.</p>
+  <div class="steps-mini"><span><b>1</b> Где пригодится</span><span><b>2</b> Ваш вопрос</span><span><b>3</b> Ответ на почту</span></div>
+
+  <form id="try" novalidate>
+    <label class="f"><span>Кто вы</span>
+      <select name="role" required><option value="">Выберите…</option><option>Частный клиент (предприниматель, семья)</option><option>Агентство</option><option>Консультант</option><option>Семейный офис</option><option>Юрист или налоговый консультант</option><option>Другое</option></select></label>
+    <label class="f"><span>Ваш рынок</span>
+      <select name="market" id="market" required><option value="">Выберите…</option><option>ОАЭ</option><option>Европа</option><option>СНГ</option><option>Азия</option><option>Латинская Америка</option><option>Другое</option></select></label>
+    
+    <label class="f"><span>Компания</span><input type="text" name="company" required autocomplete="organization"></label>
+    <label class="f"><span>Три вопроса, с которыми вы или ваши клиенты сталкиваетесь чаще всего</span><textarea name="client_questions" required></textarea></label>
+    <label class="f"><span>Чего вам стоит неверный ответ</span>
+      <select name="cost" required><option value="">Выберите…</option><option>Сделки</option><option>Клиента</option><option>Штрафа или задержки</option><option>Репутации</option><option>Другое</option></select></label>
+    <label class="f"><span>Ваш вопрос для Synapse</span><textarea name="question" id="question" maxlength="600" required></textarea><span class="count" id="count">0 / 600</span></label>
+    <p class="hint" style="margin-bottom:-12px">На этот адрес мы пришлём ответ.</p>
+    <label class="f"><span>Рабочая почта</span><input type="email" name="email" required autocomplete="email"></label>
+    <label class="consent"><input type="checkbox" name="consent" id="consent"><span>Мне можно написать позже о Synapse.</span></label>
+    <p class="count" id="total" style="justify-self:start">Текст анкеты: 0 / 1800</p>
+    <div class="row-btns"><button class="btn" type="submit" id="send">Подготовить письмо</button><button class="btn ghost" type="button" id="clear">Очистить анкету</button><span id="saved" class="hint" aria-live="polite"></span></div>
+    <div class="fallback" id="fallback" hidden>
+      <span class="lbl">Письмо готово</span>
+      <p class="hint">Откройте его в почтовой программе или скопируйте текст и отправьте на <b>ilia@fromsynapse.com</b> с любого ящика. Ответы остаются в анкете на этом устройстве, пока вы её не очистите.</p>
+      <textarea id="fallback-text" readonly aria-label="Ваша анкета текстом"></textarea>
+      <div class="row-btns"><a class="btn" id="mailto-link" href="mailto:ilia@fromsynapse.com" target="_blank" rel="noopener">Открыть почту</a><button class="btn ghost" type="button" id="copy2">Скопировать текст</button><span id="copied2" class="hint" aria-live="polite"></span></div>
+    </div>
+    
+    <p class="hint">Со страницы ничего не отправляется: письмо вы отправляете сами. Или напишите на <a href="mailto:ilia@fromsynapse.com" target="_blank" rel="noopener">ilia@fromsynapse.com</a> с теми же ответами: <button class="btn ghost" type="button" id="copy" style="padding:9px 12px;margin-left:4px">Скопировать текст анкеты</button> <span id="copied" class="hint" aria-live="polite"></span></p>
+    <p class="hint">Ваши ответы видит только владелец продукта Synapse: они нужны, чтобы ответить вам и улучшить продукт. Ваш вопрос обрабатывает Synapse, чтобы подготовить ответ.</p>
+  </form>
+</div></div></main>
+<footer><div class="wrap">
+  <span class="sig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Synapse"><path d="M7.5 6V26" stroke="#123b56" stroke-width="3" stroke-linecap="round"/><path d="M7.5 10H17M7.5 16H13.5M7.5 22H10" stroke="#123b56" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="10" r="2.9" fill="#2f6b50"/><circle cx="20.5" cy="16" r="2.9" fill="#8b642d"/><circle cx="17" cy="22" r="2.9" fill="#c94e67"/></svg><b>Synapse</b><span>· Сначала узнать, потом доказать, потом советовать</span></span>
+  <span>Владелец продукта: Илья Смыслов · <a href="mailto:ilia@fromsynapse.com" target="_blank" rel="noopener">ilia@fromsynapse.com</a></span>
+  <span class="langs" aria-label="Язык сайта"><b>RU</b> · <a href="../en/try.html" hreflang="en" lang="en">EN</a></span>
+</div></footer>
+<script>
+(function () {
+  var form = document.getElementById('try'), market = document.getElementById('market'),
+      send = document.getElementById('send'),
+      q = document.getElementById('question'), count = document.getElementById('count');
+  q.addEventListener('input', function () { count.textContent = q.value.length + ' / 600'; });
+  var MAX = 1800, total = document.getElementById('total'), copyBtn = document.getElementById('copy'), copied = document.getElementById('copied');
+  function body() {
+    var f = form.elements;
+    return ['Кто я: ' + f.role.value, 'Рынок: ' + f.market.value, 'Компания: ' + f.company.value,
+      'Три вопроса, с которыми я или мои клиенты сталкиваемся чаще всего:', f.client_questions.value,
+      'Чего стоит неверный ответ: ' + f.cost.value, 'Мой вопрос для Synapse:', f.question.value,
+      'Рабочая почта (ответ сюда): ' + f.email.value,
+      'Можно писать мне позже о Synapse: ' + (f.consent.checked ? 'да' : 'нет')].join(String.fromCharCode(10));
+  }
+  function measure() {
+    var n = body().length, over = n > MAX;
+    total.textContent = 'Текст анкеты: ' + n + ' / ' + MAX + (over ? ' — пожалуйста, сократите ответы' : '');
+    total.style.color = over ? 'var(--rose-strong)' : '';
+    send.disabled = over;
+    return over;
+  }
+  var KEY = 'synapse-try-draft-ru-v1', saved = document.getElementById('saved');
+  function save() {
+    try {
+      var d = {};
+      [].forEach.call(form.elements, function (el) { if (el.name) d[el.name] = el.type === 'checkbox' ? el.checked : el.value; });
+      localStorage.setItem(KEY, JSON.stringify(d));
+      saved.textContent = 'Черновик сохранён на этом устройстве.';
+    } catch (err) { saved.textContent = ''; }
+  }
+  function restore() {
+    try {
+      var d = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (!d) return;
+      [].forEach.call(form.elements, function (el) {
+        if (!el.name || !(el.name in d)) return;
+        if (el.type === 'checkbox') el.checked = !!d[el.name]; else el.value = d[el.name];
+      });
+      count.textContent = q.value.length + ' / 600';
+      saved.textContent = 'Черновик восстановлен.';
+    } catch (err) {}
+  }
+  restore();
+  form.addEventListener('input', function () { measure(); save(); });
+  form.addEventListener('change', function () { measure(); save(); });
+  document.getElementById('clear').addEventListener('click', function () {
+    try { localStorage.removeItem(KEY); } catch (err) {}
+    form.reset(); count.textContent = '0 / 600'; saved.textContent = 'Анкета очищена.';
+    document.getElementById('fallback').hidden = true; measure();
+  });
+  function copyText(text, out) {
+    try {
+      navigator.clipboard.writeText(text).then(function () { out.textContent = 'Скопировано.'; },
+        function () { out.textContent = 'Копирование здесь заблокировано — выделите текст и скопируйте вручную.'; });
+    } catch (err) { out.textContent = 'Копирование здесь заблокировано — выделите текст и скопируйте вручную.'; }
+  }
+  document.getElementById('copy2').addEventListener('click', function () {
+    copyText(document.getElementById('fallback-text').value, document.getElementById('copied2'));
+  });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (measure()) { return; }
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    var fb = document.getElementById('fallback');
+    document.getElementById('fallback-text').value = 'To: ilia@fromsynapse.com' + String.fromCharCode(10) + 'Subject: Synapse: вопрос' + String.fromCharCode(10, 10) + body();
+    fb.hidden = false; save();
+    document.getElementById('mailto-link').href = 'mailto:ilia@fromsynapse.com?subject=' + encodeURIComponent('Synapse: вопрос') + '&body=' + encodeURIComponent(body());
+    fb.scrollIntoView({ block: 'nearest' });
+  });
+  copyBtn.addEventListener('click', function () { copyText(body(), copied); });
+  measure();
+})();
+</script>
+</body>
+</html>
