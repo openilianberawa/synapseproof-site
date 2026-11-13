@@ -299,20 +299,20 @@ html[dir=rtl] .eyebrow, html[dir=rtl] .hero .eyebrow { padding-left:8px; padding
 <main id="top"><div class="wrap"><div class="form-wrap">
   <p class="eyebrow">سؤال واحد مجانًا</p>
   <h1>اطرح سؤالًا واحدًا</h1>
-  <p class="lead">سؤال واحد، وإجابة واحدة مدقَّقة، مجانًا. أخبرنا أولًا أين ستستخدمها: فهذا ما نتعلم منه.</p>
+  <p class="lead">سؤال واحد، وإجابة واحدة مدقَّقة، مجانًا. أخبرنا أولًا في أي مجال ستستخدم Synapse: فهذا ما نتعلم منه.</p>
   <p class="hint">تصل الإجابة إلى بريد العمل الإلكتروني، عادةً خلال يوم عمل واحد.</p>
-  <div class="steps-mini"><span><b>1</b> أين ستستخدمه</span><span><b>2</b> سؤالك</span><span><b>3</b> الإجابة بالبريد الإلكتروني</span></div>
+  <div class="steps-mini"><span><b>1</b> مجال الاستخدام</span><span><b>2</b> سؤالك</span><span><b>3</b> الإجابة بالبريد الإلكتروني</span></div>
 
   <form id="try" novalidate>
     <label class="f"><span>من أنت</span>
-      <select name="role" required><option value="">اختر…</option><option>عميل فرد (رائد أعمال، عائلة)</option><option>وكالة</option><option>مستشار</option><option>مكتب عائلي</option><option>محامٍ أو مستشار ضريبي</option><option>غير ذلك</option></select></label>
+      <select name="role" required><option value="">اختر…</option><option>عميل فرد (رائد أعمال، عائلة)</option><option>وسيط عقاري</option><option>مستشار</option><option>مكتب عائلي</option><option>مستشار انتقال وضرائب أو محامٍ</option><option>غير ذلك</option></select></label>
     <label class="f"><span>سوقك</span>
       <select name="market" id="market" required><option value="">اختر…</option><option>الإمارات</option><option>أوروبا</option><option>رابطة الدول المستقلة</option><option>آسيا</option><option>أمريكا اللاتينية</option><option>غير ذلك</option></select></label>
     
     <label class="f"><span>الشركة</span><input type="text" name="company" required autocomplete="organization"></label>
     <label class="f"><span>الأسئلة الثلاثة التي تواجهها أنت أو عملاؤك أكثر من غيرها</span><textarea name="client_questions" required></textarea></label>
-    <label class="f"><span>كم تكلّفك الإجابة الخاطئة</span>
-      <select name="cost" required><option value="">اختر…</option><option>صفقة</option><option>عميل</option><option>غرامة أو تأخير</option><option>السمعة</option><option>غير ذلك</option></select></label>
+    <label class="f"><span>ماذا قد تكلّفك الإجابة الخاطئة</span>
+      <select name="cost" required><option value="">اختر…</option><option>صفقة</option><option>عميل</option><option>غرامة أو تأخير</option><option>سمعتك</option><option>غير ذلك</option></select></label>
     <label class="f"><span>سؤالك إلى Synapse</span><textarea name="question" id="question" maxlength="600" required></textarea><span class="count" id="count">0 / 600</span></label>
     <p class="hint" style="margin-bottom:-12px">سنرسل الإجابة إلى هذا العنوان.</p>
     <label class="f"><span>بريد العمل الإلكتروني</span><input type="email" name="email" required autocomplete="email"></label>
@@ -322,17 +322,17 @@ html[dir=rtl] .eyebrow, html[dir=rtl] .hero .eyebrow { padding-left:8px; padding
     <div class="fallback" id="fallback" hidden>
       <span class="lbl">رسالتك جاهزة</span>
       <p class="hint">افتحها في تطبيق البريد، أو انسخ النص وأرسله إلى <b>ilia@fromsynapse.com</b> من أي صندوق بريد. تبقى إجاباتك في هذه الاستمارة على هذا الجهاز إلى أن تمسحها.</p>
-      <textarea id="fallback-text" readonly aria-label="استمارتك في صيغة نص"></textarea>
+      <textarea id="fallback-text" readonly aria-label="نص استمارتك"></textarea>
       <div class="row-btns"><a class="btn" id="mailto-link" href="mailto:ilia@fromsynapse.com">افتح تطبيق البريد</a><button class="btn ghost" type="button" id="copy2">انسخ النص</button><span id="copied2" class="hint" aria-live="polite"></span></div>
     </div>
     
     <p class="hint">لا يُرسَل أي شيء من هذه الصفحة: أنت من يرسل الرسالة. أو اكتب إلى <a href="mailto:ilia@fromsynapse.com">ilia@fromsynapse.com</a> بالإجابات نفسها: <button class="btn ghost" type="button" id="copy" style="padding:9px 12px;margin-left:4px">انسخ نص الاستمارة</button> <span id="copied" class="hint" aria-live="polite"></span></p>
-    <p class="hint">لا يطّلع على إجاباتك سوى مالك منتج Synapse: فهي لازمة للرد عليك ولتحسين المنتج. ويعالج النظام سؤالك لإعداد الإجابة.</p>
+    <p class="hint">لا يطّلع على إجاباتك سوى مؤسس Synapse: فهي لازمة للرد عليك ولتحسين المنتج. ويعالج النظام سؤالك لإعداد الإجابة.</p>
   </form>
 </div></div></main>
 <footer><div class="wrap">
   <span class="sig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Synapse"><circle cx="16" cy="8.2" r="4" fill="#123b56"/><path d="M16 12V21.5" stroke="#123b56" stroke-width="3" stroke-linecap="round"/><path d="M6.5 25.5H25.5" stroke="#2f6b50" stroke-width="3" stroke-linecap="round"/></svg><b>Synapse</b><span>· نتحرّى أولًا، ثم نُثبت، ثم ننصح</span></span>
-  <span>مالك المنتج: Ilia Smyslov · <a href="mailto:ilia@fromsynapse.com">ilia@fromsynapse.com</a></span>
+  <span>المؤسس: Ilia Smyslov · <a href="mailto:ilia@fromsynapse.com">ilia@fromsynapse.com</a></span>
   <span class="langs" aria-label="لغة الموقع"><a href="../ru/try.html" hreflang="ru" lang="ru">RU</a> · <a href="../en/try.html" hreflang="en" lang="en">EN</a> · <b>AR</b></span>
 </div></footer>
 <script>
@@ -383,14 +383,14 @@ html[dir=rtl] .eyebrow, html[dir=rtl] .hero .eyebrow { padding-left:8px; padding
   form.addEventListener('change', function () { measure(); save(); });
   document.getElementById('clear').addEventListener('click', function () {
     try { localStorage.removeItem(KEY); } catch (err) {}
-    form.reset(); count.textContent = '0 / 600'; saved.textContent = 'مُسحت الاستمارة.';
+    form.reset(); count.textContent = '0 / 600'; saved.textContent = 'تم مسح الاستمارة.';
     document.getElementById('fallback').hidden = true; measure();
   });
   function copyText(text, out) {
     try {
-      navigator.clipboard.writeText(text).then(function () { out.textContent = 'نُسخ.'; },
-        function () { out.textContent = 'النسخ محظور هنا — حدّد النص وانسخه يدويًا.'; });
-    } catch (err) { out.textContent = 'النسخ محظور هنا — حدّد النص وانسخه يدويًا.'; }
+      navigator.clipboard.writeText(text).then(function () { out.textContent = 'تم النسخ.'; },
+        function () { out.textContent = 'النسخ غير متاح هنا — حدّد النص وانسخه يدويًا.'; });
+    } catch (err) { out.textContent = 'النسخ غير متاح هنا — حدّد النص وانسخه يدويًا.'; }
   }
   document.getElementById('copy2').addEventListener('click', function () {
     copyText(document.getElementById('fallback-text').value, document.getElementById('copied2'));

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Задать один вопрос — Synapse</title>
-<meta name="description" content="Расскажите, где вы стали бы пользоваться Synapse, задайте один вопрос и получите проверенный ответ на рабочую почту, бесплатно.">
+<meta name="description" content="Расскажите, для каких задач вам нужен Synapse, задайте один вопрос и получите проверенный ответ на рабочую почту, бесплатно.">
 <meta name="referrer" content="no-referrer">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2032%2032%22%20width=%2216%22%20height=%2216%22%20role=%22img%22%20aria-label=%22Synapse%22%3E%3Ccircle%20cx=%2216%22%20cy=%228.2%22%20r=%224%22%20fill=%22%23123b56%22/%3E%3Cpath%20d=%22M16%2012V21.5%22%20stroke=%22%23123b56%22%20stroke-width=%223%22%20stroke-linecap=%22round%22/%3E%3Cpath%20d=%22M6.5%2025.5H25.5%22%20stroke=%22%232f6b50%22%20stroke-width=%223%22%20stroke-linecap=%22round%22/%3E%3C/svg%3E">
 <link rel="canonical" href="https://synapseproof.com/ru/try.html">
@@ -265,40 +265,40 @@ h2 { font-family:var(--ui); font-weight:800; letter-spacing:-.03em; font-size:34
 <main id="top"><div class="wrap"><div class="form-wrap">
   <p class="eyebrow">Один вопрос бесплатно</p>
   <h1>Задайте один вопрос</h1>
-  <p class="lead">Один вопрос — один проверенный ответ, бесплатно. Сначала расскажите, где вы стали бы им пользоваться: именно из этого мы учимся.</p>
+  <p class="lead">Один вопрос — один проверенный ответ, бесплатно. Сначала расскажите, для каких задач вам нужен Synapse: по этим ответам мы его улучшаем.</p>
   <p class="hint">Ответ придёт на рабочую почту, обычно в течение рабочего дня.</p>
   <div class="steps-mini"><span><b>1</b> Где пригодится</span><span><b>2</b> Ваш вопрос</span><span><b>3</b> Ответ на почту</span></div>
 
   <form id="try" novalidate>
     <label class="f"><span>Кто вы</span>
-      <select name="role" required><option value="">Выберите…</option><option>Частный клиент (предприниматель, семья)</option><option>Агентство</option><option>Консультант</option><option>Семейный офис</option><option>Юрист или налоговый консультант</option><option>Другое</option></select></label>
+      <select name="role" required><option value="">Выберите…</option><option>Частный клиент (предприниматель, семья)</option><option>Брокер недвижимости</option><option>Консультант</option><option>Семейный офис</option><option>Консультант по релокации и налогам или юрист</option><option>Другое</option></select></label>
     <label class="f"><span>Ваш рынок</span>
       <select name="market" id="market" required><option value="">Выберите…</option><option>ОАЭ</option><option>Европа</option><option>СНГ</option><option>Азия</option><option>Латинская Америка</option><option>Другое</option></select></label>
     
     <label class="f"><span>Компания</span><input type="text" name="company" required autocomplete="organization"></label>
-    <label class="f"><span>Три вопроса, с которыми вы или ваши клиенты сталкиваетесь чаще всего</span><textarea name="client_questions" required></textarea></label>
-    <label class="f"><span>Чего вам стоит неверный ответ</span>
+    <label class="f"><span>Три вопроса, которые чаще всего возникают у вас или ваших клиентов</span><textarea name="client_questions" required></textarea></label>
+    <label class="f"><span>Чего может стоить вам неверный ответ</span>
       <select name="cost" required><option value="">Выберите…</option><option>Сделки</option><option>Клиента</option><option>Штрафа или задержки</option><option>Репутации</option><option>Другое</option></select></label>
     <label class="f"><span>Ваш вопрос для Synapse</span><textarea name="question" id="question" maxlength="600" required></textarea><span class="count" id="count">0 / 600</span></label>
     <p class="hint" style="margin-bottom:-12px">На этот адрес мы пришлём ответ.</p>
     <label class="f"><span>Рабочая почта</span><input type="email" name="email" required autocomplete="email"></label>
-    <label class="consent"><input type="checkbox" name="consent" id="consent"><span>Мне можно написать позже о Synapse.</span></label>
+    <label class="consent"><input type="checkbox" name="consent" id="consent"><span>Можно писать мне позже о Synapse.</span></label>
     <p class="count" id="total" style="justify-self:start">Текст анкеты: 0 / 1800</p>
     <div class="row-btns"><button class="btn" type="submit" id="send">Подготовить письмо</button><button class="btn ghost" type="button" id="clear">Очистить анкету</button><span id="saved" class="hint" aria-live="polite"></span></div>
     <div class="fallback" id="fallback" hidden>
       <span class="lbl">Письмо готово</span>
-      <p class="hint">Откройте его в почтовой программе или скопируйте текст и отправьте на <b>ilia@fromsynapse.com</b> с любого ящика. Ответы остаются в анкете на этом устройстве, пока вы её не очистите.</p>
+      <p class="hint">Откройте его в почтовой программе или скопируйте текст и отправьте на <b>ilia@fromsynapse.com</b> с любого адреса. Ответы остаются в анкете на этом устройстве, пока вы её не очистите.</p>
       <textarea id="fallback-text" readonly aria-label="Ваша анкета текстом"></textarea>
       <div class="row-btns"><a class="btn" id="mailto-link" href="mailto:ilia@fromsynapse.com">Открыть почту</a><button class="btn ghost" type="button" id="copy2">Скопировать текст</button><span id="copied2" class="hint" aria-live="polite"></span></div>
     </div>
     
     <p class="hint">Со страницы ничего не отправляется: письмо вы отправляете сами. Или напишите на <a href="mailto:ilia@fromsynapse.com">ilia@fromsynapse.com</a> с теми же ответами: <button class="btn ghost" type="button" id="copy" style="padding:9px 12px;margin-left:4px">Скопировать текст анкеты</button> <span id="copied" class="hint" aria-live="polite"></span></p>
-    <p class="hint">Ваши ответы видит только владелец продукта Synapse: они нужны, чтобы ответить вам и улучшить продукт. Ваш вопрос обрабатывает Synapse, чтобы подготовить ответ.</p>
+    <p class="hint">Ваши ответы видит только основатель Synapse: они нужны, чтобы ответить вам и улучшить продукт. Ваш вопрос обрабатывает Synapse, чтобы подготовить ответ.</p>
   </form>
 </div></div></main>
 <footer><div class="wrap">
   <span class="sig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Synapse"><circle cx="16" cy="8.2" r="4" fill="#123b56"/><path d="M16 12V21.5" stroke="#123b56" stroke-width="3" stroke-linecap="round"/><path d="M6.5 25.5H25.5" stroke="#2f6b50" stroke-width="3" stroke-linecap="round"/></svg><b>Synapse</b><span>· Сначала узнать, потом доказать, потом советовать</span></span>
-  <span>Владелец продукта: Илья Смыслов · <a href="mailto:ilia@fromsynapse.com">ilia@fromsynapse.com</a></span>
+  <span>Основатель: Илья Смыслов · <a href="mailto:ilia@fromsynapse.com">ilia@fromsynapse.com</a></span>
   <span class="langs" aria-label="Язык сайта"><b>RU</b> · <a href="../en/try.html" hreflang="en" lang="en">EN</a> · <a href="../ar/try.html" hreflang="ar" lang="ar">AR</a></span>
 </div></footer>
 <script>
@@ -311,8 +311,8 @@ h2 { font-family:var(--ui); font-weight:800; letter-spacing:-.03em; font-size:34
   function body() {
     var f = form.elements;
     return ['Кто я: ' + f.role.value, 'Рынок: ' + f.market.value, 'Компания: ' + f.company.value,
-      'Три вопроса, с которыми я или мои клиенты сталкиваемся чаще всего:', f.client_questions.value,
-      'Чего стоит неверный ответ: ' + f.cost.value, 'Мой вопрос для Synapse:', f.question.value,
+      'Три вопроса, которые чаще всего возникают у меня или моих клиентов:', f.client_questions.value,
+      'Чего может стоить неверный ответ: ' + f.cost.value, 'Мой вопрос для Synapse:', f.question.value,
       'Рабочая почта (ответ сюда): ' + f.email.value,
       'Можно писать мне позже о Synapse: ' + (f.consent.checked ? 'да' : 'нет')].join(String.fromCharCode(10));
   }
@@ -366,7 +366,7 @@ h2 { font-family:var(--ui); font-weight:800; letter-spacing:-.03em; font-size:34
     if (measure()) { return; }
     if (!form.checkValidity()) { form.reportValidity(); return; }
     var fb = document.getElementById('fallback');
-    document.getElementById('fallback-text').value = 'To: ilia@fromsynapse.com' + String.fromCharCode(10) + 'Subject: Synapse: вопрос' + String.fromCharCode(10, 10) + body();
+    document.getElementById('fallback-text').value = 'To: ilia@fromsynapse.com' + String.fromCharCode(10) + 'Тема: Synapse: вопрос' + String.fromCharCode(10, 10) + body();
     fb.hidden = false; save();
     document.getElementById('mailto-link').href = 'mailto:ilia@fromsynapse.com?subject=' + encodeURIComponent('Synapse: вопрос') + '&body=' + encodeURIComponent(body());
     fb.scrollIntoView({ block: 'nearest' });
