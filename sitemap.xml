@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://synapseproof.com/ru/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://synapseproof.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://synapseproof.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://synapseproof.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://synapseproof.com/en/"/>
+  </url>
+  <url>
+    <loc>https://synapseproof.com/en/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://synapseproof.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://synapseproof.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://synapseproof.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://synapseproof.com/en/"/>
+  </url>
+  <url>
+    <loc>https://synapseproof.com/ar/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://synapseproof.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://synapseproof.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://synapseproof.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://synapseproof.com/en/"/>
+  </url>
+  <url>
+    <loc>https://synapseproof.com/ru/try.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://synapseproof.com/ru/try.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://synapseproof.com/en/try.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://synapseproof.com/ar/try.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://synapseproof.com/en/try.html"/>
+  </url>
+  <url>
+    <loc>https://synapseproof.com/en/try.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://synapseproof.com/ru/try.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://synapseproof.com/en/try.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://synapseproof.com/ar/try.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://synapseproof.com/en/try.html"/>
+  </url>
+  <url>
+    <loc>https://synapseproof.com/ar/try.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://synapseproof.com/ru/try.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://synapseproof.com/en/try.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://synapseproof.com/ar/try.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://synapseproof.com/en/try.html"/>
+  </url>
+</urlset>
