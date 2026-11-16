@@ -242,7 +242,25 @@ footer .legal-links { display:flex; flex-wrap:wrap; gap:4px 18px; }
 footer .legal-links a { color:var(--muted); display:inline-flex; align-items:center; min-height:44px; }
 @media (max-width:700px) { .legal-doc { padding:32px 0 48px; } }
 </style>
-<!-- td99 -->
+<style id="g-hero">
+.h1row h1{display:inline;margin:0}
+.h1row{margin:0 0 6px}
+.g-inline{display:inline-flex;align-items:center;justify-content:center;gap:12px;vertical-align:baseline;position:relative;margin-inline-start:28px;box-sizing:border-box;padding:0 16px;min-height:46px;overflow:hidden;background:#fff;color:#1f1f1f;border:1px solid #747775;border-radius:4px;font:500 18px/1 Roboto,Arial,"Segoe UI",sans-serif;letter-spacing:normal;text-transform:none;cursor:pointer;box-shadow:0 1px 3px #0001;white-space:nowrap}
+.g-inline img{width:22px;height:22px;display:block}
+.g-inline:hover{background:#f8faff;box-shadow:0 2px 6px #0002}
+.g-note{margin:12px 0 0;color:#66747b;font:400 14px/1.5 Arial,"Segoe UI",sans-serif}
+#g-dialog{width:min(420px,calc(100% - 32px));padding:26px;border:1px solid #b8c6cf;border-radius:10px;color:#123b56;font:400 17px/1.6 Arial,"Segoe UI",sans-serif}
+#g-dialog::backdrop{background:#123b5644}
+#g-dialog p{margin:0 0 18px}
+#g-dialog .g-acts{display:flex;flex-wrap:wrap;gap:10px}
+#g-dialog .g-acts a,#g-dialog button{padding:9px 20px;border:1px solid #747775;border-radius:6px;font:400 16px Arial,sans-serif;cursor:pointer;text-decoration:none}
+#g-dialog .g-acts a{background:#123b56;color:#fff;border-color:#123b56}
+#g-dialog button{background:#fff;color:#123b56}
+.g-inline.own{display:flex;width:fit-content;margin:18px 0 0;top:0}
+@media(max-width:700px){.g-inline{display:flex;width:100%;justify-content:center;margin:18px 0 0;top:0;font-size:17px;min-height:52px}}
+.opts{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+.opts + .g-note{margin:12px 0 34px}
+</style><!-- td99 -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Synapse">
 <meta property="og:title" content="Synapse — اسأل قبل أن تنفق مبلغًا كبيرًا">
@@ -309,9 +327,9 @@ footer .legal-links a { color:var(--muted); display:inline-flex; align-items:cen
 <section class="hero"><div class="wrap"><div class="hero-grid">
   <div>
   <p class="eyebrow">لقرارات تتعلق بمبالغ كبيرة</p>
-  <h1>اسأل قبل أن تنفق مبلغًا كبيرًا</h1>
+  <div class="h1row"><h1>اسأل قبل أن تنفق مبلغًا كبيرًا</h1><button class="g-inline" id="google" type="button" aria-haspopup="dialog"><img src="../google-g.png" alt=""><span>التسجيل عبر Google</span></button></div><div class="opts"><a class="btn" href="try.html">اطرح سؤالًا</a><a class="btn ghost" href="#example">اطّلع على الأمثلة</a><a class="btn ghost" href="#any">حساب نزيه للعائد على الاستثمار</a></div><p class="g-note">السؤال الأول مجانًا، ومن دون كلمة مرور.</p>
   <p class="lead">رسوم خفية، وقواعد تغيّرت في الشهر الماضي، وإعلانات تُقدَّم على أنها حقائق. يطابق Synapse كل إفادة في الإجابة مع مصدرها الأصلي — قانون، أو سجل، أو سعر صرف رسمي — ويبيّن إلى أي مدى يمكن الوثوق بها. وكل ما لا مصدر له يُوسَم ولا يُخفى.</p><blockquote class="pitch"><p>نقلتُ مستثمري صندوق من سوتشي إلى دبي، ولذلك أعرف ما ينتظر كل من ينتقل مع عائلته أو أعماله: قواعد جديدة، ورسوم خفية، ونصائح «من القلب» تُقدَّم مقابل عمولة. منذ نحو عشر سنوات ألتزم مع عملائي بقاعدة واحدة: «نتحرّى أولًا، ثم نُثبت، ثم ننصح» — وأقول «لا» بصدق. وللحفاظ عليها بنيتُ نظامًا يبحث عن الأدلة لا عن الآراء: كل إفادة تأتي مع مصدرها ودرجة الثقة بها. اطرح سؤالًا واحدًا مجانًا.</p><span class="pitch-sig">— Ilia Smyslov، مؤسس Synapse</span></blockquote>
-  <div class="btns"><a class="btn" href="try.html">اطرح سؤالًا</a><a class="btn ghost" href="#example">اطّلع على الأمثلة</a></div>
+  
   <p class="lines-now">نعمل اليوم في: <b>شؤون العائلات ذات الأصول في عدة دول</b> · <b>الانتقال والأعمال عبر الحدود</b></p>
   </div>
   <aside class="mini" aria-label="مثال على بحث · 11 نوفمبر 2026: نيجيريا ← إسبانيا">
@@ -466,5 +484,5 @@ footer .legal-links a { color:var(--muted); display:inline-flex; align-items:cen
   <!-- legal-links --><span class="legal-links" aria-label="السياسات"><a href="terms.html">الشروط</a> <a href="privacy.html">الخصوصية</a> <a href="refund.html">الاسترداد</a> <a href="pricing.html">الباقات</a></span>
   <span class="langs" aria-label="لغة الموقع"><a href="../ru/" hreflang="ru" lang="ru">RU</a> · <a href="../en/" hreflang="en" lang="en">EN</a> · <b>AR</b></span>
 </div></footer>
-</body>
+<dialog id="g-dialog"><p>سيتوفر التسجيل عبر Google قريبًا. وإلى ذلك الحين، اطرح سؤالك عبر الاستمارة.</p><form method="dialog" class="g-acts"><a href="try.html">اطرح سؤالًا</a><button>إغلاق</button></form></dialog><script>document.getElementById("google").addEventListener("click",function(){document.getElementById("g-dialog").showModal()});</script><script>(function(){var b=document.getElementById("google"),h=document.querySelector(".h1row h1");function lines(){return [].slice.call(h.getClientRects());}function capH(){var cs=getComputedStyle(h),c=document.createElement("canvas").getContext("2d");c.font=cs.fontWeight+" "+cs.fontSize+" "+cs.fontFamily;var m=c.measureText(String.fromCharCode(document.documentElement.lang==="ar"?1575:1053));return m.actualBoundingBoxAscent||parseFloat(cs.fontSize)*.69;}function baseline(){var z=document.createElement("span");z.style.cssText="display:inline-block;width:0;height:0;vertical-align:baseline";h.appendChild(z);var y=z.getBoundingClientRect().bottom;h.removeChild(z);return y;}function fit(){b.removeAttribute("style");b.classList.remove("own");if(innerWidth<=700)return;var rtl=document.documentElement.dir==="rtl",ru=document.documentElement.lang==="ru",gap=ru?38:24,ch=Math.round(capH());b.style.height=ch+"px";b.style.minHeight="0";b.style.fontSize=Math.max(14,Math.round(ch*.4))+"px";b.style.padding="0 "+Math.round(ch*.32)+"px";b.style.gap=Math.round(ch*.24)+"px";var im=b.querySelector("img");im.style.width=im.style.height=Math.round(ch*.48)+"px";b.style.marginInlineStart=gap+"px";var rr=lines(),last=rr[rr.length-1],maxR=-1e9,minL=1e9;rr.forEach(function(r){maxR=Math.max(maxR,r.right);minL=Math.min(minL,r.left);});var bw=b.getBoundingClientRect().width,avail=rtl?(last.left-minL-gap):(maxR-last.right-gap);if(bw>avail+1){b.removeAttribute("style");im.removeAttribute("style");b.classList.add("own");return;}var base=baseline(),br=b.getBoundingClientRect();b.style.top=Math.round(base-br.bottom+(ru?7:0))+"px";}fit();addEventListener("resize",fit);document.fonts&&document.fonts.ready.then(fit);})();</script></body>
 </html>
